@@ -1,0 +1,22 @@
+﻿// pch.h: 这是预编译标头文件。
+// 下方列出的文件仅编译一次，提高了将来生成的生成性能。
+// 这还将影响IntelliSense性能，包括代码完成和许多代码浏览功能。
+// 但是，如果此处列出的文件中的任何一个在生成之间有更新，它们全部都将被重新编译。
+// 请勿在此处添加要频繁更新的文件，这将使得性能优势无效。
+
+#ifndef PCH_H
+#define PCH_H
+
+// 添加要在此处预编译的标头
+#include "framework.h"
+#include <shlwapi.h>
+#include <shellapi.h>  // 添加这一行，包含SHChangeNotify函数所需的头文件
+#include <ShlObj.h>
+
+// 链接需要的系统库
+#pragma comment(lib, "shlwapi.lib")
+#pragma comment(lib, "user32.lib")
+#pragma comment(lib, "gdi32.lib")
+#pragma comment(lib, "shell32.lib")
+
+#endif //PCH_H
